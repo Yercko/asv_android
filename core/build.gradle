@@ -1,0 +1,72 @@
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion project.ext.COMPILESDKVERSION
+  buildToolsVersion '28.0.3'
+  defaultConfig {
+    minSdkVersion project.ext.MINSDKVERSION
+    targetSdkVersion project.ext.TARGETSDKVERSION
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  dataBinding {
+    enabled = true
+  }
+}
+
+dependencies {
+  final SUPPORT_LIBRARY_VERSION = project.ext.SUPPORT_LIBRARY_VERSION
+  final RX_JAVA_VERSION = project.ext.RX_JAVA_VERSION
+  final RX_ANDROID_VERSION = project.ext.RX_ANDROID_VERSION
+  final DAGGER_VERSION = project.ext.DAGGER_VERSION
+  final RETROFIT_VERSION = project.ext.RETROFIT_VERSION
+
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  // RxAndroid
+  implementation "io.reactivex.rxjava2:rxandroid:$RX_ANDROID_VERSION"
+
+  // RxJava
+  implementation "io.reactivex.rxjava2:rxjava:$RX_JAVA_VERSION"
+
+  // Retrofit
+  implementation "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+
+  // Support
+  implementation "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
+  implementation "com.android.support:support-v4:$SUPPORT_LIBRARY_VERSION"
+  implementation "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
+  implementation "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
+  implementation "com.android.support:recyclerview-v7:$SUPPORT_LIBRARY_VERSION"
+  implementation 'com.android.support.constraint:constraint-layout:1.1.+'
+
+  // Apache
+  implementation 'org.apache.commons:commons-lang3:3.7'
+
+  // GSON
+  implementation 'com.google.code.gson:gson:2.7'
+
+  //Dagger
+  def daggerCompiler = "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+  implementation "com.google.dagger:dagger:$DAGGER_VERSION"
+  implementation "com.google.dagger:dagger-android-support:$DAGGER_VERSION"
+  annotationProcessor daggerCompiler
+  annotationProcessor "com.google.dagger:dagger-android-processor:$DAGGER_VERSION"
+
+  implementation 'com.android.support:multidex:1.0.2'
+
+  // Test
+  testImplementation 'junit:junit:4.12'
+  androidTestImplementation 'com.android.support.test:runner:1.0.2'
+  androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

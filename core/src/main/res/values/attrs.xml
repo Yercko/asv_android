@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="LoadingButton">
+    <attr name="android:text" />
+    <attr name="android:textColor" />
+    <attr name="android:enabled" />
+    <attr name="loading" format="boolean" />
+
+  </declare-styleable>
+  <declare-styleable name="styleEditTextClickable">
+    <attr name="android:inputType" />
+    <attr name="android:enabled" />
+    <attr name="android:maxLength" />
+    <attr name="android:hint" />
+    <attr name="android:textAlignment" />
+    <attr name="iconLeft" format="reference" />
+    <attr name="iconLeftrounded" format="reference" />
+    <attr name="iconRight" format="reference" />
+  </declare-styleable>
+
+  <declare-styleable name="styleAddressView">
+    <attr name="digitColor" format="reference"/>
+    <attr name="android:text" />
+  </declare-styleable>
+
+  <declare-styleable name="styleSpinnerBN">
+    <attr name="state_disabled" format="boolean"/>
+    <attr name="disabled" format="boolean"/>
+    <attr name="android:text" />
+    <attr name="android:enabled" format="boolean"/>
+    <attr name="icLeft" format="reference" />
+    <attr name="icRight" format="reference" />
+  </declare-styleable>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorBorder">#cacada</color>
+  <color name="colorDisabled">#e1e1e1</color>
+  <color name="colorPrimaryBlue">#3276d7</color>
+  <!-- Colores de la aplicacion -->
+  <color name="colorTransparent">@android:color/transparent</color>
+  <color name="colorTextBlack">#343434</color>
+  <color name="colorPrimaryBlueTransparent">#2b3276d7</color>
+  <color name="colorWhite">#ffffff</color>
+  <color name="colorWhiteTransparent">#70ffffff</color>
+  <color name="colorOrange">#f08900</color>
+  <color name="colorWhiteDark">#fefefe</color>
+  <color name="colorGray">#e1e1e1</color>
+  <color name="colorMediumGray">#f9f9f9</color>
+  <color name="colorTextGrayDark">#646464</color>
+  <color name="colorTextGraySubtitle">#a8a8a8</color>
+
+
+</resources>

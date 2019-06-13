@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <style name="EditTextClickable">
+    <item name="android:background">@drawable/bg_round_border</item>
+  </style>
+  <style name="AddressView">
+    <item name="android:background">@drawable/bg_round_border</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">30sp</item>
+    <item name="android:typeface">monospace</item>
+    <item name="android:padding">10dp</item>
+  </style>
+  <style name="Button.Bordered" parent="android:Widget.Button">
+    <item name="android:textColor">@color/colorPrimaryBlue</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:stateListAnimator" tools:targetApi="lollipop">@null</item>
+  </style>
+  <style name="Normal.Exo" parent="TextAppearance.AppCompat.Body1">
+    <item name="android:fontFamily">@font/exo_regular</item>
+  </style>
+  <style name="Title.Exo" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+    <item name="android:fontFamily">@font/exo_regular</item>
+  </style>
+</resources>
